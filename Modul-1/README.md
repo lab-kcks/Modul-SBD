@@ -3,10 +3,10 @@
 ## Daftar Isi
 - [ERD Chen](#1-erd-chen)
 - [ERD Crow's Foot](#2-erd-crows-foot)
- - [Entitas](#1-entitas)
- - [Atribut](#2-atribut)
- - [Primary Key dan Foreign Key](#3-primary-key-dan-foreign-key)
- - [Relasi](#4-relasi)
+  - [Entitas](#1-entitas)
+  - [Atribut](#2-atribut)
+  - [Primary Key dan Foreign Key](#3-primary-key-dan-foreign-key)
+  - [Relasi](#4-relasi)
 
 ## 1. ERD Chen
 Notasi Chen  menggunakan berlian dan menghubungkan garis dengan simbol untuk menggambarkan hubungan dan kardinalitas. Atribut juga dapat ditampilkan sebagai oval.
@@ -49,6 +49,10 @@ Bentuk Notasi Crow’s Foot:
  4. Relasi
 
  ![relasi](images/relasi.png)
+
+
+
+
 
 
 ![Tabel Notasi](images/tabel_notasi.png)
