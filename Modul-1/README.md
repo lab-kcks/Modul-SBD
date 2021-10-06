@@ -184,7 +184,7 @@ Spesialisasi adalah proses mengidentifikasi perbedaan karakteristik antarentitas
 
 ![kesimpulan_general_spesial](images/kesimpulan_general_spesial.png)
 
-Agregasi
+Agregasi  
 Merupakan sebuah relasi yang secara kronologis mensyaratkan telah adanya relasi lain.
 
 ![agregasi](images/agregasi.png)
