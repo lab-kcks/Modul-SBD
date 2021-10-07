@@ -189,3 +189,4 @@ Merupakan sebuah relasi yang secara kronologis mensyaratkan telah adanya relasi 
 + https://medium.com/telematika/spesialisasi-generalisasi-pengguna-basis-data-akademik-630a4191c2cb
 + https://repository.dinus.ac.id/docs/ajar/9.materi_ERD__.pdf
 + https://repository.dinus.ac.id/docs/ajar/c-5-BD.pdf
++ http://lea.si.fti.unand.ac.id/wp-content/uploads/2018/02/Modul-6-Spesialisasi-Generalisasi-dan-Agregasi.pdf
