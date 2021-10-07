@@ -20,6 +20,8 @@ Bentuk Notasi Chen:
 
 ![Bentuk Notasi Chen](images/bentuk_notasi_chen.png)
 
+![Tabel Notasi](images/tabel_notasi.png)
+
 ### A. Entitas
 Kumpulan objek yang dapat diidentifikasikan secara unik atau saling berbeda. Biasanya, simbol dari entitas adalah persegi panjang. Jenis-jenis entitas dibagi menjadi dua jenis yaitu: 
  + Entitas kuat adalah entitas yang eksistensinya tidak bergantung pada entitas lain. 
@@ -155,13 +157,6 @@ Bentuk Notasi Crow’s Foot:
  4. Relasi
 
  ![relasi](images/relasi.png)
-
-
-
-
-
-
-![Tabel Notasi](images/tabel_notasi.png)
 
 ## Spesialisasi dan Generalisasi
 - Spesialisasi
