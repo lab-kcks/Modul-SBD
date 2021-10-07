@@ -148,13 +148,11 @@ Bentuk Notasi Crow’s Foot:
 
  ![Entitas dengan Atribut](images/entitas_dengan_atribut.png)
 
- 3. Kardinalitas
+ 3. Kardinalitas dan Relasi
 
  ![Kardinalitas 1](images/kardinalitas_1.png)
 
  ![Kardinalitas 2](images/kardinalitas_2.png)
-
- 4. Relasi
 
  ![relasi](images/relasi.png)
 
