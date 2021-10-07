@@ -20,44 +20,7 @@ Bentuk Notasi Chen:
 
 ![Bentuk Notasi Chen](images/bentuk_notasi_chen.png)
 
-## 2. ERD Crow's Foot
-Notasi Crow's Foot hanya menggunakan garis dengan simbol di ujungnya. Kardinalitas sangat penting untuk menunjukkan hubungan numerik antara entitas. 
-Kardinalitas pada Notasi Crow’s Foot:
-Crow's Foot memiliki hubungan ini. Meskipun logikanya sama, representasi visualnya sangat berbeda:
- - One
- - Many
- - Zero or many
- - One or many
- - One and only one
- - Zero or one
-
-Bentuk Notasi Crow’s Foot:
- 1. Bentuk Entitas
-
- ![Bentuk Entitas](images/bentuk_entitas.png)
-
- 2. Entitas dengan Atribut
-
- ![Entitas dengan Atribut](images/entitas_dengan_atribut.png)
-
- 3. Kardinalitas
-
- ![Kardinalitas 1](images/kardinalitas_1.png)
-
- ![Kardinalitas 2](images/kardinalitas_2.png)
-
- 4. Relasi
-
- ![relasi](images/relasi.png)
-
-
-
-
-
-
-![Tabel Notasi](images/tabel_notasi.png)
-
-### 1. Entitas
+### A. Entitas
 Kumpulan objek yang dapat diidentifikasikan secara unik atau saling berbeda. Biasanya, simbol dari entitas adalah persegi panjang. Jenis-jenis entitas dibagi menjadi dua jenis yaitu: 
  + Entitas kuat adalah entitas yang eksistensinya tidak bergantung pada entitas lain. 
  + Entitas lemah adalah entitas yang eksistensinya bergantung pada entitas lain. Entitas lemah tidak memiliki atribut key yang berfungsi sebagai primary key.
@@ -67,7 +30,7 @@ Kumpulan objek yang dapat diidentifikasikan secara unik atau saling berbeda. Bia
 Entitas mahasiswa sebagai entitas kuat karena dia tidak bergantung pada entitas yang lain dan memiliki atribute key yang bertindak sebagai primary key yang ditandai dengan tulisan bergaris bawah yaitu nim.
 Sedangkan entitas hobi merupakan entitas lemah karena dia keberadaannya tergantung pada entitas mahasiswa. Dan dia tidak memiliki atribut yang menyatakan bahwa itu primary key.
 
-### 2. Atribut
+### B. Atribut
 Komponen kedua dari ERD adalah atribut. Setiap entitas pasti mempunyai elemen yang disebut atribut yang berfungsi untuk mendeskripsikan karakteristik dari entitas tersebut. Atribut kunci merupakan hal pembeda atribut dengan entitas. Gambar atribut diwakili oleh simbol elips dan terbagi menjadi beberapa jenis:
  + Atribut kunci (key): atribut yang digunakan untuk menentukan entitas secara unik. Contoh: NPWP, NIM (Nomor Induk Mahasiswa).
  + Atribut simpel: atribut bernilai tunggal yang tidak dapat dipecah lagi (atomic). Contoh: Alamat, tahun terbit buku, nama penerbit.
@@ -75,7 +38,7 @@ Komponen kedua dari ERD adalah atribut. Setiap entitas pasti mempunyai elemen ya
  + Atribut gabungan (composite): atribut yang terdiri dari beberapa atribut yang lebih kecil dengan arti tertentu. Contoh: nama lengkap yang terbagi menjadi nama depan, tengah, dan belakang.
  + Atribut derivatif: atribut yang dihasilkan dari atribut lain dan tidak wajib ditulis dalam diagram ER. Contoh: usia, kelas, selisih harga.
 
-### 3. Primary Key dan Foreign Key
+### C. Primary Key dan Foreign Key
 - Primary Key
 Dalam SQL database management system, primary key adalah tanda pengenal unik yang membedakan satu record dari yang lain. Oleh karena itu, setiap record dalam SQL database management system harus memiliki primary key. Tetapi ada beberapa aturan yang harus kalian ikuti ketika menentukan primary key untuk tabel:
   + Primary key harus berisi nilai unik. Jika primary key terdiri dari beberapa kolom, kombinasi value pada kolom ini harus unik.
@@ -88,7 +51,7 @@ Saat memutuskan tabel mana dalam database relasional yang harus memiliki foreign
 
 ![key](images/key.png)
 
-### 4. Relasi
+### D. Relasi
 Relasi yaitu menggambarkan hubungan antara entitas satu dengan entitas lainnya sesuai proses bisnisnya. Notasinya digambarkan dengan belah ketupat. Relasi memiliki kardinalitas relasi yang menggambarkan banyaknya jumlah maksimum entitas dapat ber-relasi pada himpunan entitas yang lain. Pada himpunan relasi biner, pemetaan kardinalitas dapat berupa salah satu dari pilihan berikut :
  + Relasi One to One
   Setiap entitas pada himpunan entitas A berhubungan paling banyak dengan satu entitas pada himpunan entitas B dan begitu juga sebaliknya.
@@ -162,6 +125,43 @@ Relasi yaitu menggambarkan hubungan antara entitas satu dengan entitas lainnya s
 
  + Relasi Many to One
  Setiap entitas pada himpunan entitas A berhubungan dengan paling banyak satu entitas pada himpunan entitas B, tetapi tidak sebaliknya.
+ 
+## 2. ERD Crow's Foot
+Notasi Crow's Foot hanya menggunakan garis dengan simbol di ujungnya. Kardinalitas sangat penting untuk menunjukkan hubungan numerik antara entitas. 
+Kardinalitas pada Notasi Crow’s Foot:
+Crow's Foot memiliki hubungan ini. Meskipun logikanya sama, representasi visualnya sangat berbeda:
+ - One
+ - Many
+ - Zero or many
+ - One or many
+ - One and only one
+ - Zero or one
+
+Bentuk Notasi Crow’s Foot:
+ 1. Bentuk Entitas
+
+ ![Bentuk Entitas](images/bentuk_entitas.png)
+
+ 2. Entitas dengan Atribut
+
+ ![Entitas dengan Atribut](images/entitas_dengan_atribut.png)
+
+ 3. Kardinalitas
+
+ ![Kardinalitas 1](images/kardinalitas_1.png)
+
+ ![Kardinalitas 2](images/kardinalitas_2.png)
+
+ 4. Relasi
+
+ ![relasi](images/relasi.png)
+
+
+
+
+
+
+![Tabel Notasi](images/tabel_notasi.png)
 
 ## Spesialisasi dan Generalisasi
 - Spesialisasi
