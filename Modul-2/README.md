@@ -251,7 +251,7 @@ Untuk mengakses phpMyAdmin, Anda hanya perlu mengetik link http://localhost/phpm
 <br>
 
 ## 5. Tipe data di MySQL
-Apa sih tipe data itu? Tipe data di MySQL merupakan jenis nilai yang ditampung pada variabel yang berupa numerik, (angka), teks, ataupun gambar. Tipe data dalam database digunakan untuk mendefinisikan suatu kolom atau field. Jenis-jenis tipe data bermacam-macam dan secara umum tipe data pada mysql ada empat kelompok yaitu Numeric, String, Date dan Tipe Data Blob.
+Apa sih tipe data itu? Tipe data di MySQL merupakan jenis nilai yang ditampung pada variabel yang berupa numerik (angka), teks, ataupun gambar. Tipe data dalam database digunakan untuk mendefinisikan suatu kolom atau field. Jenis-jenis tipe data bermacam-macam dan secara umum tipe data pada mysql ada empat kelompok yaitu Numeric, String, Date dan Tipe Data Blob.
 
 Penggunaan typedata pada database memiliki beberapa fungsi yaitu:
 - Untuk memberikan batasan atau format pada kolom table suatu database.
@@ -260,12 +260,13 @@ Penggunaan typedata pada database memiliki beberapa fungsi yaitu:
 
 Pada database tipe data akan terlihat seperti fungsi/function pada umumnya di pemrograman, oleh karena itu terdapat tipe data pada database yang wajib Anda set/menentukan nilai parameter, dan ada juga tipe data yang tidak memerlukan parameter.
 
-Parameter pada tipe data ini digunakan untuk menentukan jumlah character berapa batas maksimal dari jumlah character. Ada juga parameter yang digunakan untuk mem-fix-kan jumlah character misal 5, maka tidak boleh kurang dan tidak boleh lebih. Untuk tipe data boolean parameter nya digunakan utnuk mendefinisakan option atau pilihan dari suatu kasus yang logik.
+Parameter pada tipe data ini digunakan untuk menentukan jumlah character berapa batas maksimal dari jumlah character. Ada juga parameter yang digunakan untuk mem-fix-kan jumlah character misal 5, maka tidak boleh kurang dan tidak boleh lebih. Untuk tipe data boolean parameter nya digunakan untuk mendefinisakan option atau pilihan dari suatu kasus yang logik.
 
 **Contoh tipe data yang perlu ditentukan parameter nya:**
 
 – Attibut `id` dengan maksimal penggunaan 2 digit bilangan bulat.
 `id INT(2)`
+
 – Attibut `username` dengan maksimal penggunaan 20 digit string.
 `username VARCHAR (20)`
 
@@ -275,12 +276,11 @@ Parameter pada tipe data ini digunakan untuk menentukan jumlah character berapa 
 – Attibut `birthday` dengan tipe data `Date`.
 `birthday DATE`
 
-
 – Attribut `address` dengan tipe data `Text`.
 `address TEXT`
 
 
-Pada database  terdapat 5 jenis tipe data itu di kelompokan berdasarkan fungsinya, yaitu String, numeric, Date, Boolean, dan Binary. Berikut masing-masing penjelasan dari tipe data, dan contoh dari tipe data pada DBMS MYSQL:
+Pada database  terdapat 5 jenis tipe data itu di kelompokan berdasarkan fungsinya, yaitu String, Numeric, Date, Boolean, dan Binary. Berikut masing-masing penjelasan dari tipe data, dan contoh dari tipe data pada DBMS MYSQL:
 
 
 **1. Tipe Data String**
@@ -299,7 +299,7 @@ String adalah tipe data yang digunakan pada kolom yang menyimpan data dalam bent
 
 **2. Tipe Data Numeric/Angka**
 
-Numeric, dari namanya sudah pasti numeric berarti digunakan pada kolom yang menyimpan data berupa angka. Tipe Data numeric memiliki beberpa format penulisan mislakan bilangan desimal, bilangan bulat, dll. Berikut ini beberapa contoh format dari tipe data numeric:
+Numeric, dari namanya sudah pasti numeric berarti digunakan pada kolom yang menyimpan data berupa angka. Tipe Data numeric memiliki beberpa format penulisan, misalkan bilangan desimal, bilangan bulat, dll. Berikut ini beberapa contoh format dari tipe data numeric:
 
 Tabel Tipe Data Numeric (Angka)
 | No. | Tipe Data | Fungsi | Jangkauan/Range | Ukuran |
@@ -332,7 +332,7 @@ Tabel Tipe Data Date (Waktu)
 **4. Tipe Data Binary**
 
 Binary adalah tipe data yang memungkinkan suatu kolom database dapat menyimpan suatu binary file, Misalkan :
-Document: Text Document(.doc, .odf), sparesheet (.xls, .ods)
+Document: Text Document (.doc, .odf), sparesheet (.xls, .ods)
 Multi Media: Gambar (.jpg, .png, .gif), video (.mp4, .mkv), music (.mp3, .acc)
 
 Berikut tabel beberapa contoh tipe data binary yang dapat digunakan pada DBMS MYSQL:
@@ -385,7 +385,6 @@ DDL adalah salah satu bentuk SQL yang bisa digunakan untuk menciptakan atau memb
 - ALTER PROCEDURE
 - ALTER TABLE
 - ALTER VIEW
-- RENAME TABLE
 
 **3. Rename**
 
