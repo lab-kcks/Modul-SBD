@@ -19,7 +19,7 @@
 Setiap bahasa pemrograman memiliki fungsi yang berbeda. Begitu pula dengan structured query language (SQL). SQL adalah bahasa query yang dirancang untuk pengambilan informasi tertentu dari database. Meskipun saat ini sudah ada berbagai jenis database, seperti MySQL, Microsoft SQL Server, dan PostgreSQL, mayoritas database tersebut tetap menggunakan dasar SQL.
 
 <br>
-<img legth="500" src="images" />
+<img width="200" src="images/modul%202-1.png" />
 <br>
 
 Lalu, apakah SQL tetap berguna jika digunakan bersamaan dengan bahasa pemrograman yang lain? Jawabannya iya. Sebagai contoh, jika menggunakan bahasa pemrograman Python, biasanya tetap membutuhkan SQL untuk mengambil data dari database. Maka, dapat disimpulkan bahwa SQL adalah salah satu bahasa query dasar dalam pengelolaan database.
@@ -79,109 +79,109 @@ Berikut ini merupakan langkah-langkah yang dilakukan untuk melakukan download da
 1.  Mendownload aplikasi MySQL Community Server di http://dev.mysql.com/downloads/mysql/ dan kemudian pilih package yang ingin diinstall sesuai dengan OS (Windows, MacOS, Ubuntu, dll) yang digunakan.
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-2-1.jpg" />
 <br>
 
 2.  Setelah package berhasil didownload, maka aplikasi MySQL siap untuk diinstal. Klik dua kali pada file penginstal MySQL. Lalu, OS akan mengonfigurasi Penginstal MySQL:
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-2-2.png" />
 <br>
 
 3. Layar Selamat Datang: Welcome Screen menyediakan beberapa opsi. Pilih opsi pertama: 'Install MySQL Products'
 
 <br>
-<img legth="500" src="3" />
+<img width="500" src="images/modul%202-2-3.png" />
 <br>
 
 4. Unduh produk MySQL terbaru: Penginstal MySQL memeriksa dan mengunduh produk MySQL terbaru termasuk server MySQL, MySQL Workbench, dll.
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-2-4.png" />
 <br>
 
 5. Klik tombol 'next' untuk melanjutkan
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-2-5.png" />
 <br>
 
 6. Memilih Jenis Pengaturan: ada beberapa jenis pengaturan yang tersedia. Pilih opsi 'Full' untuk menginstal semua produk dan fitur MySQL.
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-2-6.png" />
 <br>
 
 7. Kemudian, kita dapat melakukan Checking Requirements.
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-2-7.png" />
 <br>
 
 8. Installation Progress: Penginstal MySQL akan mengunduh semua produk yang dipilih:
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-2-8.png" />
 <br>
 
 9. Installation Progress, ditunjukkan progress pengunduhan produk:
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-2-9.png" />
 <br>
 
 10. Setelah progress instalasi selesai, klik tombol 'next' untuk melanjutkan:
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-2-10.png" />
 <br>
 
 11. Klik tombol 'Next' untuk mengkonfigurasi Server Database MySQL:
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-2-11.png" />
 <br>
 
 12. Pilih Config Type dan MySQL port (3006 secara default) dan klik tombol 'Next' untuk melanjutkan.
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-2-12.png" />
 <br>
 
 13. Konfigurasi Server MySQL: pilih kata sandi untuk akun root. Harap perhatikan unduhan kata sandi dan simpan dengan aman jika Anda menginstal server database MySQL di server produksi. Jika Anda ingin menambahkan lebih banyak pengguna MySQL, Anda dapat melakukannya di langkah ini.
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-2-13.png" />
 <br>
 
 14. Konfigurasi Server MySQL: pilih detail layanan Windows termasuk Nama Layanan Windows dan jenis akun, lalu klik tombol 'Next' untuk melanjutkan.
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-2-14.png" />
 <br>
 
 15. Konfigurasi Server MySQL – Sedang Berlangsung: Penginstal MySQL sedang mengonfigurasi server database MySQL. Tunggu sampai selesai dan klik tombol 'Next' untuk melanjutkan.
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-2-15.png" />
 <br>
 
 16. Konfigurasi Server MySQL – Selesai. Klik tombol 'Next' untuk melanjutkan.
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-2-16.png" />
 <br>
 
 17. Ikhtisar Konfigurasi: Penginstal MySQL menginstal database sampel dan model sampel.
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-2-17.png" />
 <br>
 
 18. Instalasi Selesai: Klik tombol 'Finish' untuk menutup installation wizard dan meluncurkan MySQL Workbench.
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-2-18.png" />
 <br>
 
 Aplikasi MySQL ini terbilang cukup mudah untuk menjalankannya. Salah satu caranya adalah dengan menggunakan Command Line mySQL yang terinstall pada OS yang digunakan. Selain itu, aplikasi ini juga dapat digunakan pada aplikasi lain seperti DbForge Studio, MySQL Workbench, dll.
@@ -195,50 +195,50 @@ Berikut adalah langkah-langkah untuk menginstall sekaligus mendownload XAMPP:
 **Langkah 1:** Download XAMPP melalui website Apache Friends pada https://www.apachefriends.org/index.html. Pilih salah satu OS yang sesuai dengan perangkat yang dimiliki:
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-3-1.png" />
 <br>
 
 **Langkah 2:** Lakukan instalasi setelah Anda selesai mengunduh. Selama proses instalasi mungkin Anda akan melihat pesan yang menanyakan apakah Anda yakin akan menginstalnya. Silakan tekan 'Yes' untuk melanjutkan instalasi. Kemudian klik tombol 'Next':
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-3-2.png" />
 <br>
 
 **Langkah 3:** Pada tampilan selanjutnya akan muncul pilihan mengenai komponen mana dari XAMPP yang ingin dan tidak ingin Anda instal. Beberapa pilihan seperti Apache dan PHP adalah bagian penting untuk menjalankan website dan akan otomatis diinstal. Silakan centang MySQL dan phpMyAdmin, untuk pilihan lainnya biarkan saja.
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-3-3.png" />
 <br>
 
 **Langkah 4:** Berikutnya silakan pilih folder tujuan dimana XAMPP ingin Anda instal, pada tutorial ini pada direktori C:\xampp.
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-3-4.png" />
 <br>
 
 **Langkah 5:** Pada halaman selanjutnya, akan ada pilihan apakah Anda ingin menginstal Bitnami untuk XAMPP, dimana nantinya dapat Anda gunakan untuk install WordPress, Drupal, dan Joomla seccara otomatis.
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-3-5.png" />
 <br>
 
 **Langkah 6:** Pada langkah ini proses instalasi XAMPP akan dimulai. Silakan klik tombol 'Next'.
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-3-6.png" />
 <br>
 
 **Langkah 7:** Setelah berhasil diinstal, akan muncul notifikasi untuk langsung menjalankan control panel. Silakan klik 'Finish'.
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-3-7.png" />
 <br>
 
 ### 3.2 Cara Menjalankan XAMPP
 Setelah instalasi XAMPP selesai, maka aplikasi XAMPP dapat segera digunakan dan dijalankan. Silakan buka aplikasi XAMPP kemudian klik tombol Start pada Apache dan MySQL. Jika berhasil dijalankan, Apache dan MySQL akan berwarna hijau seperti gambar di bawah ini. Untuk melakukan pengecekan, silakan akses link http://localhost atau 127.0.0.1 melalui browser.
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-3-8.png" />
 <br>
 
 ## 4. Cara mengakses MySQL
@@ -247,7 +247,7 @@ Setelah XAMPP berhasil diakses, maka Anda bisa mengakses tabel SQL pada phpMyAdm
 Untuk mengakses phpMyAdmin, Anda hanya perlu mengetik link http://localhost/phpmyadmin, maka akan muncul tampilan seperti ini:
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-4-1.jpg" />
 <br>
 
 ## 5. Tipe data di MySQL
@@ -358,7 +358,7 @@ Tabel Type Data Boolean
 Contoh Pengaplikasian Tipe Data pada Console MySQL
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-5.jpg" />
 <br>
 
 ## 6. Pengenalan DDL
@@ -378,7 +378,7 @@ DDL adalah salah satu bentuk SQL yang bisa digunakan untuk menciptakan atau memb
 
 **2. Alter**
 
-`Alter` adalah perintah yang dipakai manakala hendak mengubah struktur suatu tabel atau memodifikasi bentuk kolom, mengganti ataupun sekedar menambah tabel yang sebelumnya sudah ada.
+`Alter` adalah perintah yang dipakai manakala hendak mengubah struktur suatu tabel atau memodifikasi bentuk kolom, mengganti ataupun sekedar menambah tabel yang sebelumnya sudah ada. Perintah `Alter` dapat dibagi menjadi beberapa macam berikut:
 
 - ALTER DATABASE
 - ALTER FUNCTION
@@ -413,32 +413,28 @@ Langkah-langkahnya adalah sebagai berikut:
 
 1. Membuka link http://localhost/phpmyadmin pada web browser
 
-<br>
-<img legth="500" src="" />
-<br>
-
 2. Pilih menu **SQL** pada toolbar di bagian atas
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-7-1.jpg" />
 <br>
 
 3. Buat sebuah database kosong, misalnya sebuah database bernama `bioskop` maka diketikkan query `CREATE DATABASE bioskop;` seperti berikut:
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-7-2.jpg" />
 <br>
 
 4. Maka akan muncul sebuah database baru bernama `bioskop` pada sebelah kiri tampilan seperti ini.
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-7-3.jpg" />
 <br>
 
 5. Setelah itu, klik database tersebut. Masuk ke dalam menu `SQL` kembali seperti ini:
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-7-4.jpg" />
 <br>
 
 6. Sekarang kita akan memmasukkan beberapa table kedalamnya, misalnya seperti sebuah program berikut:
@@ -514,7 +510,7 @@ CREATE TABLE transaksi (
 7. Setelah itu, maka akan muncul tampilan seperti ini menandakan bahwa tabel-tabel yang dimasukkan telah berhasil dibuat:
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-7-5.jpg" />
 <br>
 
 ### 7.2 Membuat Database melalui UI
@@ -523,31 +519,31 @@ Langkah-langkahnya adalah sebagai berikut:
 1. Pada bagian kiri localhost/phpMyAdmin, silahkan klik New untuk membuat database baru.
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-7-6.png" />
 <br>
 
 2. Masukkan nama database pada kolom yang tersedia. Pada tutorial ini, kita menggunakan nama `database_baru` sebagai nama database yang akan dibuat. Jika sudah diberi nama, klik Create.
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-7-7.png" />
 <br>
 
 3. Kali ini, mari membuat tabel dengan empat kolom untuk data pengguna dengan nama tabel `users`.  Kemudian, klik tombol **Go**.
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-7-8.png" />
 <br>
 
 4. Di bagian ini, Anda harus memasukkan nama kolom dan tipe datanya. Untuk tabel `users`, kita akan membuat kolom `id`, `name`, `email`, dan `address`. Jika sudah terisi seperti gambar di bawah ini, klik tombol `Save`.
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-7-9.png" />
 <br>
 
 5. Sekarang, kita sudah memiliki database dengan tabel users yang diinginkan.
 
 <br>
-<img legth="500" src="" />
+<img width="500" src="images/modul%202-7-10.png" />
 <br>
 
 ## Referensi
