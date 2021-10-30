@@ -30,8 +30,7 @@ Merupakan bahasa yang digunakan untuk memanipulasi data dari basis data (dalam h
 | UPDATE|  | Memodifikasi nilai atribut dalam satu atau lebih baris tabel |
 | DELETE|  | Menghapus satu atau lebih baris dari tabel |
 | Comparison operator| =,<,>,<=,>=,<>,!= | Digunakan pada conditional expressions |
-| Logical Operators| =,<,>,<=,>=,<>,!= | Digunakan pada conditional expressions|
-| Special operators| | Digunakan pada conditional expressions|
+| Logical Operators|  | Digunakan pada conditional expressions|
 | | BETWEEN | Memeriksa apakah nilai atribut berada dalam rentang|
 | | IN | Memeriksa apakah nilai atribut cocok dengan nilai yang terdapat dalam daftar nilai|
 | | LIKE | Memeriksa apakah nilai atribut cocok dengan pola string yang diberikan |
