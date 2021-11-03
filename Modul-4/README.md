@@ -77,7 +77,7 @@ DROP nama_tabel;
     ALTER TABLE nama_tabel
     ADD constraint [ ADD constraint ];
     ```
-    *jenis-jenis constraint bisa diliat [disini](../Modul-3/README.md)
+    *jenis-jenis constraint bisa diliat [disini](../Modul-3/README.md#5-constraint-table)
 
 - Perintah ALTER TABLE untuk menghapus kolom atau tabel
 constraint. dengan syntax sebagai berikut :
