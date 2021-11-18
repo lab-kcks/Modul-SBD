@@ -34,7 +34,7 @@ Contoh:
   ORDER BY NamaDepan ASC;
   ```
 
-![image](https://user-images.githubusercontent.com/73152464/142403455-984a298d-12bc-44c8-8531-2e7b5cfe4e94.png
+![image](https://user-images.githubusercontent.com/73152464/142403455-984a298d-12bc-44c8-8531-2e7b5cfe4e94.png)
 
 ## 2. Fungsi Agregasi
 Fungsi agregasi dapat digunakan untuk mencari jumlah, rata-rata, nilai maksimal dan nilai minimal dalam field yang terdapat pada table.
