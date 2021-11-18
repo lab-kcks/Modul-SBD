@@ -192,7 +192,7 @@ Contoh:
   Ekspresi Query dapat digunakan untuk melakukan perubahan terhadap field kolom keluaran, menambah baris teks field keluaran.
     
   ### <b> 4.1 Mengganti Nama Field keluaran <b>
-    Syntax yang digunakan untuk mengganti nama field keluaran:
+  Syntax yang digunakan untuk mengganti nama field keluaran:
   
     ```sql  
     SELECT column_name AS alias_name
