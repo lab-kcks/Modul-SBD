@@ -252,20 +252,22 @@ Contoh:
 ## 5. Fungsi Waktu
   Kita dapat mengetahui waktu dengan menggunakan syntax SQL. Beberapa Fungsi waktu dalam MySQL antara lain:  
   
-    - Current_Date : Untuk menampilkan tanggal saat ini
+- Current_Date : Untuk menampilkan tanggal saat ini
 ```sql  
 SELECT CURRENT_DATE 
 ```
   
-    ![image](https://user-images.githubusercontent.com/73152464/142410005-2cf01c7b-2879-46c0-8676-3cd66151ad04.png)
+![image](https://user-images.githubusercontent.com/73152464/142410005-2cf01c7b-2879-46c0-8676-3cd66151ad04.png)
 
-    - Current_Time : Untuk menampilkan waktu saat ini
+- Current_Time : Untuk menampilkan waktu saat ini
 ``` sql
 SELECT CURRENT_TIME
 ```
-  
-    ![image](https://user-images.githubusercontent.com/73152464/142410106-78233a30-6258-49e1-87c6-4af48dd23011.png)
+
+![image](https://user-images.githubusercontent.com/73152464/142410106-78233a30-6258-49e1-87c6-4af48dd23011.png)
 
 - Current_Timestamp: Untuk menampilkan tanggal dan waktu saat ini
-  
-    ![image](https://user-images.githubusercontent.com/73152464/142410280-a44bf8a7-d8dc-4462-819e-9bd301b3aa6e.png) 
+``` sql
+SELECT CURRENT_TIMESTAMP
+```
+![image](https://user-images.githubusercontent.com/73152464/142410280-a44bf8a7-d8dc-4462-819e-9bd301b3aa6e.png) 
