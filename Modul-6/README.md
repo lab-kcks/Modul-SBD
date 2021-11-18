@@ -198,25 +198,54 @@ Contoh:
     SELECT column_name AS alias_name
     FROM table_name;
     ```
-    Contoh:
+  Contoh:
     
     ```sql
     SELECT NamaDepan AS ini_nama_depan 
     FROM mahasiswa;
     ```
   
-    ![image](https://user-images.githubusercontent.com/73152464/142411117-6641a0d4-b1d6-4537-a627-a8de970e3af0.png)
+  ![image](https://user-images.githubusercontent.com/73152464/142411117-6641a0d4-b1d6-4537-a627-a8de970e3af0.png)
 
     ```sql
     SELECT NamaDepan AS 'ini_nama_depan', NamaBelakang AS 'ini_nama_belakang' 
     FROM mahasiswa;
     ```
     
-    ![image](https://user-images.githubusercontent.com/73152464/142411599-2eec5a55-1fa6-43a0-8969-e6f223e1346d.png)
+  ![image](https://user-images.githubusercontent.com/73152464/142411599-2eec5a55-1fa6-43a0-8969-e6f223e1346d.png)
     
     ### <b> 4.2 Menambahkan Baris Teks Field Keluaran <b>
+  Syntax yang digunakan:
   
+  ```sql
+  Select Nama_Field_Asal As 'Nama_Field_Pengganti' From Nama_Table;
+  ```
+  Contoh:
+  ```sql
+  SELECT NamaDepan AS 'ini_nama_depan', 'alamatnya_di', Alamat FROM mahasiswa;
+  ```
   
+  ![image](https://user-images.githubusercontent.com/73152464/142412839-3358aa42-97e3-4aa7-b201-dd3a43623259.png)
+
+  ### <b> 4.3 Ekspresi Kondisi <b>
+  Syntax yang digunakan:
+  
+  ```sql
+  Select Nama_Field_1 Case Nama_Field_2 When 'Nilai_field_2'
+  Then 'Keterangan_1' Else 'Keterangan_2'
+  End As Nilai_field_2 From Nama_Table;
+  ```
+  
+  Contoh:
+  ```sql
+  Select `NamaDepan` `NamaBelakang`, 
+  Case `Alamat` When 'Jl. Tumpel Agung' Then 'kembar' Else 'nggak kembar' 
+  End As `Status_mhs` From mahasiswa;
+  ```
+  
+  ![image](https://user-images.githubusercontent.com/73152464/142413783-e346bd50-eadb-4f78-a851-6a295024236c.png)
+
+   
 ## 5. Fungsi Waktu
   
   Kita dapat mengetahui waktu dengan menggunakan syntax SQL. Beberapa Fungsi waktu dalam MySQL antara lain:  
