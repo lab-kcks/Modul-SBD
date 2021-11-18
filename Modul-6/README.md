@@ -227,12 +227,12 @@ Contoh:
   
   Contoh:
   ```sql
-  Select `NamaDepan` `NamaBelakang`, 
+  Select `NamaDepan`, `NamaBelakang`, 
   Case `Alamat` When 'Jl. Tumpel Agung' Then 'kembar' Else 'nggak kembar' 
   End As `Status_mhs` From mahasiswa;
   ```
   
-  ![image](https://user-images.githubusercontent.com/73152464/142413783-e346bd50-eadb-4f78-a851-6a295024236c.png)
+![image](https://user-images.githubusercontent.com/73152464/142419118-862ce669-07d9-40b4-b2bb-8ef1bd9da44d.png)
 
    
 ## 5. Fungsi Waktu
