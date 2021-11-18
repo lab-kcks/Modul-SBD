@@ -39,14 +39,14 @@ Contoh:
 ## 2. Fungsi Agregasi
 Fungsi agregasi dapat digunakan untuk mencari jumlah, rata-rata, nilai maksimal dan nilai minimal dalam field yang terdapat pada table.
 Beberapa fungsi agregasi
-
+<br>
 | Agregasi | Keterangan |
 | COUNT | Menghitung cacah data |
 | SUM | Menjumlahkan data |
 | AVG | Mencari Rata-rata data |
 | MAX | Mencari nilai maksimal |
 | MIN | Mencari nilai minimal |
-  
+<br>
 Syntax dan contoh dari Fungsi Agregasi adalah sebagai berikut.
   ```sql
   SELECT COUNT|SUM|AVG|MAX|MIN(column_name)
@@ -150,6 +150,8 @@ Contoh:
   FROM table_name
   WHERE column LIKE pattern;
   ```
+  
+  <br>
   | No | Pattern | Keterangan |
   | 1. | WHERE table_name LIKE 'a%' | Mencari semua data yang dimulai dengan huruf “a” |
   | 2. | WHERE table_name LIKE '%i' | Mencari semua data yang diakhiri dengan huruf “i” |
@@ -158,6 +160,7 @@ Contoh:
   | 5. | WHERE table_name LIKE 'a_%' | Mencari semua data yang dimulai dengan huruf “a” dan memiliki setidaknya panjang 2 huruf |
   | 6. | WHERE table_name LIKE 'a__%' | Mencari semua data yang dimulai dengan huruf “a” dan memiliki setidaknya panjang 3 huruf |
   | 7. | WHERE table_name LIKE 'n%a’ | Mencari semua data yang dimulai dengan huruf “a” dan diakhiri dengan huruf “h” |
+  <br>
 
   Contoh:
   1. `SELECT * FROM mahasiswa WHERE NamaDepan LIKE 'a%'`
@@ -194,27 +197,27 @@ Contoh:
   ### <b> 4.1 Mengganti Nama Field keluaran <b>
   Syntax yang digunakan untuk mengganti nama field keluaran:
   
-    ```sql  
-    SELECT column_name AS alias_name
-    FROM table_name;
-    ```
+  ```sql  
+  SELECT column_name AS alias_name
+  FROM table_name;
+  ```
   Contoh:
     
-    ```sql
-    SELECT NamaDepan AS ini_nama_depan 
-    FROM mahasiswa;
-    ```
+ ```sql
+ SELECT NamaDepan AS ini_nama_depan 
+ FROM mahasiswa;
+ ```
   
   ![image](https://user-images.githubusercontent.com/73152464/142411117-6641a0d4-b1d6-4537-a627-a8de970e3af0.png)
 
-    ```sql
-    SELECT NamaDepan AS 'ini_nama_depan', NamaBelakang AS 'ini_nama_belakang' 
-    FROM mahasiswa;
-    ```
+```sql
+  SELECT NamaDepan AS 'ini_nama_depan', NamaBelakang AS 'ini_nama_belakang' 
+  FROM mahasiswa;
+```
     
   ![image](https://user-images.githubusercontent.com/73152464/142411599-2eec5a55-1fa6-43a0-8969-e6f223e1346d.png)
     
-    ### <b> 4.2 Menambahkan Baris Teks Field Keluaran <b>
+  ### <b> 4.2 Menambahkan Baris Teks Field Keluaran <b>
   Syntax yang digunakan:
   
   ```sql
@@ -247,22 +250,22 @@ Contoh:
 
    
 ## 5. Fungsi Waktu
-  
   Kita dapat mengetahui waktu dengan menggunakan syntax SQL. Beberapa Fungsi waktu dalam MySQL antara lain:  
+  
     - Current_Date : Untuk menampilkan tanggal saat ini
-    ```sql  
-    SELECT CURRENT_DATE 
-    ```
+```sql  
+SELECT CURRENT_DATE 
+```
   
     ![image](https://user-images.githubusercontent.com/73152464/142410005-2cf01c7b-2879-46c0-8676-3cd66151ad04.png)
 
     - Current_Time : Untuk menampilkan waktu saat ini
-    ``` sql
-    SELECT CURRENT_TIME
-    ```
+``` sql
+SELECT CURRENT_TIME
+```
   
     ![image](https://user-images.githubusercontent.com/73152464/142410106-78233a30-6258-49e1-87c6-4af48dd23011.png)
 
-    - Current_Timestamp: Untuk menampilkan tanggal dan waktu saat ini
+- Current_Timestamp: Untuk menampilkan tanggal dan waktu saat ini
   
     ![image](https://user-images.githubusercontent.com/73152464/142410280-a44bf8a7-d8dc-4462-819e-9bd301b3aa6e.png) 
