@@ -40,12 +40,14 @@ Contoh:
 Fungsi agregasi dapat digunakan untuk mencari jumlah, rata-rata, nilai maksimal dan nilai minimal dalam field yang terdapat pada table.
 Beberapa fungsi agregasi
 <br>
-| Agregasi | Keterangan |
-| COUNT | Menghitung cacah data |
-| SUM | Menjumlahkan data |
-| AVG | Mencari Rata-rata data |
-| MAX | Mencari nilai maksimal |
-| MIN | Mencari nilai minimal |
+  
+  | Agregasi | Keterangan |
+  | COUNT | Menghitung cacah data |
+  | SUM | Menjumlahkan data |
+  | AVG | Mencari Rata-rata data |
+  | MAX | Mencari nilai maksimal |
+  | MIN | Mencari nilai minimal |
+  
 <br>
 Syntax dan contoh dari Fungsi Agregasi adalah sebagai berikut.
   ```sql
