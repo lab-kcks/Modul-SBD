@@ -39,16 +39,9 @@ Contoh:
 ## 2. Fungsi Agregasi
 Fungsi agregasi dapat digunakan untuk mencari jumlah, rata-rata, nilai maksimal dan nilai minimal dalam field yang terdapat pada table.
 Beberapa fungsi agregasi
-<br>
+
+![image](https://user-images.githubusercontent.com/73152464/142415441-a9d88fb9-353e-40c9-ac2c-402a81af0eed.png)
   
-  | Agregasi | Keterangan |
-  | COUNT | Menghitung cacah data |
-  | SUM | Menjumlahkan data |
-  | AVG | Mencari Rata-rata data |
-  | MAX | Mencari nilai maksimal |
-  | MIN | Mencari nilai minimal |
-  
-<br>
 Syntax dan contoh dari Fungsi Agregasi adalah sebagai berikut.
   ```sql
   SELECT COUNT|SUM|AVG|MAX|MIN(column_name)
@@ -152,17 +145,8 @@ Contoh:
   FROM table_name
   WHERE column LIKE pattern;
   ```
-  
-  <br>
-  | No | Pattern | Keterangan |
-  | 1. | WHERE table_name LIKE 'a%' | Mencari semua data yang dimulai dengan huruf “a” |
-  | 2. | WHERE table_name LIKE '%i' | Mencari semua data yang diakhiri dengan huruf “i” |
-  | 3. | WHERE table_name LIKE '%an%' | Mencari semua data yang memiliki huruf “an” di semua posisi |
-  | 4. | WHERE table_name LIKE '_i%' | Mencari semua data yang memiliki huruf “i” di posisi kedua |
-  | 5. | WHERE table_name LIKE 'a_%' | Mencari semua data yang dimulai dengan huruf “a” dan memiliki setidaknya panjang 2 huruf |
-  | 6. | WHERE table_name LIKE 'a__%' | Mencari semua data yang dimulai dengan huruf “a” dan memiliki setidaknya panjang 3 huruf |
-  | 7. | WHERE table_name LIKE 'n%a’ | Mencari semua data yang dimulai dengan huruf “a” dan diakhiri dengan huruf “h” |
-  <br>
+ 
+![image](https://user-images.githubusercontent.com/73152464/142415544-c9bc0cc8-b759-40c4-93a3-86cc5204ef21.png)
 
   Contoh:
   1. `SELECT * FROM mahasiswa WHERE NamaDepan LIKE 'a%'`
