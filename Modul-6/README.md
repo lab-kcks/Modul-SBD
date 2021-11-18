@@ -9,7 +9,7 @@
   - [3.1 Operator Between](#31-operator-between)
   - [3.2 Operator IN](#32-operator-in)
   - [3.3 Operator LIKE](#31-operator-like)
-- [4. Select](#4-select)
+- [4. Ekspresi Query](#4-select)
 - [5. Fungsi Waktu](#5-fungsi-waktu)
 
 Pada modul kali ini kita akan membahas lebih lanjut terkait fungsi-fungsi pada DML. Tanpa capcipcup mari kita langsung eksekusi.
@@ -17,9 +17,9 @@ Pada modul kali ini kita akan membahas lebih lanjut terkait fungsi-fungsi pada D
 ## 1. Pengurutan data
 Untuk mengurutkan tampilan data dari suatu table, digunakan klausa Order By. Klausa Order By, dapat digunakan untuk mengurutkan data :  
   ### <b> 1.1 Asc (Ascending) <b>
-              Untuk mengurutkan data dari kecil ke besar 
+  Untuk mengurutkan data dari kecil ke besar 
   ### <b> 1.2 Desc (Descending) <b>
-              Untuk mengurutkan data dari besar ke kecil <b>
+  Untuk mengurutkan data dari besar ke kecil
   
 Syntax dan contoh dari Order By adalah sebagai berikut.
   ```sql
@@ -189,8 +189,9 @@ Contoh:
   ![image](https://user-images.githubusercontent.com/73152464/142409565-e87fa322-2a3a-4c94-8293-1b947ef3f14e.png)
 
 ## 4. Ekspresi Query
-      Ekspresi Query dapat digunakan untuk melakukan perubahan terhadap field kolom keluaran, menambah baris teks field keluaran.
-    ### <b> 4.1 Mengganti Nama Field keluaran <b>
+  Ekspresi Query dapat digunakan untuk melakukan perubahan terhadap field kolom keluaran, menambah baris teks field keluaran.
+    
+  ### <b> 4.1 Mengganti Nama Field keluaran <b>
     Syntax yang digunakan untuk mengganti nama field keluaran:
   
     ```sql  
@@ -217,7 +218,8 @@ Contoh:
   
   
 ## 5. Fungsi Waktu
-      Kita dapat mengetahui waktu dengan menggunakan syntax SQL. Beberapa Fungsi waktu dalam MySQL antara lain:  
+  
+  Kita dapat mengetahui waktu dengan menggunakan syntax SQL. Beberapa Fungsi waktu dalam MySQL antara lain:  
     - Current_Date : Untuk menampilkan tanggal saat ini
     ```sql  
     SELECT CURRENT_DATE 
