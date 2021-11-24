@@ -12,7 +12,7 @@
 
 ## 1. Select Data dengan Join Table
 
-![image](1)
+![image](https://github.com/Kota-Cerdas-dan-Keamanan-Siber/Modul-SBD/blob/main/Modul-7/images/gambar%201.png)
 
 Klausa JOIN pada sebuah sistem basis data digunakan untuk menggabungkan baris dari satu atau lebih tabel, berdasarkan kolom terkait di antara mereka. Atau dalam istilah lain, perintah JOIN dalam SQL digunakan untuk menampilkan data pada table yang saling berelasi atau tanpa berelasi tapi berhubungan. Artinya, kita dapat menampilkan data dalam beberapa table dengan melihat ada kesamaan antar tabel. Walau ada entitas yang berbeda, namun isinya tetap dapat kita hubungkan.
 
@@ -31,7 +31,7 @@ WHERE condition;
 
 Dapat dilihat bahwa tabel yang digunakan dalam operasi ini merupakan tabel yang sama, yaitu `table1`. Misalnya kita memiliki sebuah tabel seperti di bawah ini:
 
-![image](2-1)
+![image](https://github.com/Kota-Cerdas-dan-Keamanan-Siber/Modul-SBD/blob/main/Modul-7/images/gambar%202-1.jpg)
 
 Kemudian kita membuat syntax di mana kita ingin melihat daftar pelanggan yang berasal dari kota yang sama seperti berikut:
 
@@ -45,12 +45,12 @@ ORDER BY A.City;
 
 Maka akan diperoleh hasil output sebagai berikut.
 
-![image](2-2)
+![image](https://github.com/Kota-Cerdas-dan-Keamanan-Siber/Modul-SBD/blob/main/Modul-7/images/gambar%202-2.jpg)
 
 Apabila ingin melihat dataset secara penuh, referensinya diambil dari https://www.w3schools.com/sql/sql_join_self.asp .
 
 ## 3. Outer Join Dua Tabel
-![image](3)
+![image](https://github.com/Kota-Cerdas-dan-Keamanan-Siber/Modul-SBD/blob/main/Modul-7/images/gambar%203.jpg)
 
 Nah untuk outer join, merupakan kondisi join atau penggabungan yang terdiri dari 2 tabel atau lebih. Untuk yang pertama akan kita coba operasi join yang terdiri dari 2 tabel terlebih dahulu biar tidak mumet. Outer join dapat dibagi menjadi 4, yaitu:
 
@@ -118,7 +118,7 @@ ON mahasiswa.nim = transaksi.nim;
 
 Table mahasiswa mempunyai 7 record dan table transaksi mempunyai 7 record. Jika menggabungkan kedua data menggunakan INNER JOIN berdasarkan kolom NIM maka hanya tampil 4 data mahasiswa yang meminjam buku di perpustakaan. Hasil outputnya adalah sebagai berikut:
 
-![image](3-1)
+![image](https://github.com/Kota-Cerdas-dan-Keamanan-Siber/Modul-SBD/blob/main/Modul-7/images/gambar%203-1.jpg)
 
 ### 3.2 Left Join
 Me-return semua record dari tabel kiri, baik yang memiliki kecocokan record dengan tabel kanan maupun yang tidak. Syntax nya dapat dilihat pada di bawah ini:
@@ -139,7 +139,7 @@ ON mahasiswa.nim = transaksi.nim;
 
 Table kiri (mahasiswa) akan menjadi table master dan mencari nilai yang sama di table transaksi. Apabila ada mahasiswa yang tidak meminjam buku maka diberi nilai NULL. Hasil outputnya adalah sebagai berikut:
 
-![image](3-2)
+![image](https://github.com/Kota-Cerdas-dan-Keamanan-Siber/Modul-SBD/blob/main/Modul-7/images/gambar%203-2.jpg)
 
 ### 3.3 Right Join
 ```sql
@@ -160,7 +160,7 @@ ON mahasiswa.nim = transaksi.nim;
 
 Hasil outputnya adalah sebagai berikut:
 
-![image](3-3)
+![image](https://github.com/Kota-Cerdas-dan-Keamanan-Siber/Modul-SBD/blob/main/Modul-7/images/gambar%203-3.jpg)
 
 Terdapat 7 transaksi peminjaman buku di perpustakaan. Bagi transaksi yang NIM mahasiswa tidak ada di table mahasiswa akan diberi nilai NULL.
 
@@ -182,7 +182,7 @@ FULL JOIN transaksi;
 
 Hasil outputnya adalah sebagai berikut:
 
-![image](3-4)
+![image](https://github.com/Kota-Cerdas-dan-Keamanan-Siber/Modul-SBD/blob/main/Modul-7/images/gambar%203-4.jpg)
 
 Jika database yang digunakan tidak support `FULL JOIN` (MYSQL tidak support FULL JOIN), maka bisa menggunakan `UNION ALL`.
 
@@ -284,4 +284,4 @@ AND status.ket_status='Cedera';
 
 Maka diperoleh hasil output seperrti berikut:
 
-![image](4-1)
+![image](https://github.com/Kota-Cerdas-dan-Keamanan-Siber/Modul-SBD/blob/main/Modul-7/images/gambar%204-1.jpg)
