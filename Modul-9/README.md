@@ -222,6 +222,6 @@ $$
 DELIMITER ;
 ```
 
-Memamnggil Function
+Memanggil Function
 ```sql
 SELECT kode_jurusan, nama_jurusan, f_sum_mhs(kode_jurusan) FROM jurusan
