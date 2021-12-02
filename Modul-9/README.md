@@ -121,7 +121,7 @@ CALL spDafGaji();
 ### 4.4 Untuk melihat listnya
 
 ```sql 
-SHOW {PROCEDURE|FUNCTION} statu s;
+SHOW {PROCEDURE|FUNCTION} status;
 ```
 
 contoh: 
