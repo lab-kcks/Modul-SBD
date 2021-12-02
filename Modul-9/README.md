@@ -42,17 +42,15 @@ RETURN adalah kata kunci yang menginstruksikan kompiler untuk mengalihkan kontro
 ### 4.1 Untuk membuat
 
 Procedure
-```
+```sql
 CREATE PROCEDURE sp_name ([proc_arameter [,…]])
-[characteristic ..]
 routine_body
 ```
 
 Function
-```
+```sql
 CREATE FUNCTION sp_name ([func_parameter [,…]])
 RETURNS type
-[characteristic ..]
 routine_body
 ```
 
@@ -67,18 +65,6 @@ Keterangan:
   
 - Type :
   Semua type data yang valid di SQL.
-
-- Characteristic:
-
-  LANGUAGE SQL
-  
-  [NOT] DETERMINISTIC
-
-  {CONTAINS SQL | NO SQL | READS SQL DATA | MODIFIES SQL DATA }
-
-  SQL SECURITY {DEFINER | INVOKER }
-
-  COMMENT ‘string’
 
 - Routine_body:
 
@@ -103,12 +89,139 @@ contoh: `DROP PORCEDURE spDafGaji;`
 contoh: `CALL spDafGaji();`
 
 
-## 5. Stored Procedure
+## 5. Uji Coba
 
-Prosedur dalam SQL adalah unit subprogram yang terdiri dari sekelompok pernyataan SQL yang dapat dipanggil dengan nama. Setiap prosedur dalam SQL memiliki nama uniknya sendiri yang dapat dirujuk dan dipanggil. 
+Tabel dan record yang akan digunakan:
+```sql
+CREATE TABLE `jurusan` (
+  `id` int(11) NOT NULL,
+  `kode_jurusan` varchar(2) NOT NULL,
+  `nama_jurusan` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-### Uji Coba
+INSERT INTO `jurusan` (`id`, `kode_jurusan`, `nama_jurusan`) VALUES
+(1, '01', 'Informatika'),
+(2, '02', 'Kimia'),
+(3, '03', 'Biologi');
 
-#### 5.1 
+CREATE TABLE `mahasiswa` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(30) NOT NULL,
+  `kode_jurusan` varchar(2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+INSERT INTO `mahasiswa` (`id`, `nama`, `kode_jurusan`) VALUES
+(1, 'Andi', '01'),
+(2, 'Bob', '01'),
+(3, 'Caca', '02'),
+(4, 'David', '02'),
+(5, 'Erika', '03');
+```
 
+### 5.1 Uji Coba Procedure
+
+#### 5.1.1 Procedure Parameter IN
+
+Menambahkan Procedure
+```sql
+CREATE PROCEDURE sp_jurusan_mhs(kdjurusan char(2))
+SELECT m.nama, m.kode_jurusan, j.nama_jurusan
+FROM mahasiswa m 
+LEFT JOIN jurusan j
+ON j.kode_jurusan = m.kode_jurusan
+WHERE m.kode_jurusan = kdjurusan;
+```
+
+Memamnggil Procedure
+```sql
+CALL sp_jurusan_mhs('01')
+```
+
+#### 5.1.2 Procedure Parameter OUT
+
+Menambahkan Procedure
+```sql
+CREATE PROCEDURE sp_sum_mhs (OUT sum int(11))
+SELECT count(*) INTO sum FROM mahasiswa;
+```
+
+Memamnggil Procedure
+```sql
+CALL sp_sum_mhs(@n);
+SELECT @n;
+```
+
+#### 5.1.3 Procedure Parameter INOUT
+
+Menambahkan Procedure
+```sql
+CREATE PROCEDURE sp_telp (INOUT telp varchar(20))
+SELECT CONCAT("(",left(telp,3),") ",substring(telp,4,3),"-",substring(telp,7))
+INTO telp
+```
+
+Memamnggil Procedure
+```sql
+SET @telp = '0211234567';
+CALL sp_telp(@telp);
+SELECT @telp;
+```
+
+#### 5.1.4 Procedure Parameter IN dan OUT
+
+Menambahkan Procedure
+```sql
+CREATE PROCEDURE sp_sum_jurusan(IN kdjurusan char(2), OUT sum int)
+SELECT count(*) INTO sum FROM mahasiswa
+WHERE kode_jurusan = kdjurusan;
+```
+
+Memamnggil Procedure
+```sql
+CALL sp_sum_jurusan('01', @n);
+SELECT @n;
+```
+
+#### 5.1.5 Procedure Parameter Compound Statement
+
+Menambahkan Procedure
+```sql
+DELIMITER $$
+CREATE PROCEDURE sp_ganti_jurusan (kd varchar(2), nm varchar(20))
+BEGIN
+    IF(EXISTS(SELECT kode_jurusan FROM jurusan WHERE kode_jurusan = kd))
+    THEN
+    	UPDATE jurusan SET nama_jurusan = nm WHERE kode_jurusan = kd;
+    ELSE
+    	INSERT INTO jurusan (kode_jurusan,nama_jurusan) VALUES (kd,nm);
+    END IF;
+END;
+$$
+DELIMITER ;
+```
+
+Memamnggil Procedure
+```sql
+CALL sp_ganti_jurusan('01', 'Statistika')
+```
+
+### 5.2 Uji Coba Function
+
+Menambahkan Function
+```sql
+DELIMITER $$
+CREATE FUNCTION f_sum_mhs (kdjurusan char(2))
+RETURNS int
+BEGIN
+    DECLARE sum int;
+    SELECT COUNT(*) INTO sum FROM mahasiswa
+    	where kode_jurusan = kdjurusan;
+    RETURN sum;
+END;
+$$
+DELIMITER ;
+```
+
+Memamnggil Function
+```sql
+SELECT kode_jurusan, nama_jurusan, f_sum_mhs(kode_jurusan) FROM jurusan
