@@ -1,20 +1,20 @@
 # Data Manipulation Language (DML) Part 4
 
 ## Daftar Isi
-- [1. Trigger]()
-     - [1.1 Pengenalan]()
-     - [1.2 Syntax]()
-     - [1.3 Contoh Implementasi]()
-     - [1.4 Pengujian Trigger]()
-- [2. View]()
-     - [2.1 Pengenalan]()
-     - [2.2 Syntax]()
-     - [2.3 Contoh Implementasi]()
-     - [2.4 Pengujian View]()
+- [1. Trigger](#1-trigger)
+     - [1.1 Pengenalan](#11-pengenalan)
+     - [1.2 Syntax](#12-syntax)
+     - [1.3 Contoh Implementasi](#13-contoh-implementasi)
+     - [1.4 Pengujian Trigger](#14-pengujian-trigger)
+- [2. View](#2-view)
+     - [2.1 Pengenalan](#21-pengenalan)
+     - [2.2 Syntax](#22-syntax)
+     - [2.3 Contoh Implementasi](#23-contoh-implementasi)
+     - [2.4 Pengujian View](#24-pengujian-view)
 ## 1. Trigger
 
 ### 1.1 Pengenalan
-![image!](gambar 1)
+![image!](https://github.com/Kota-Cerdas-dan-Keamanan-Siber/Modul-SBD/blob/main/Modul-8/img/gambar%201.png)
 
 TRIGGER adalah kumpulan kode SQL yang berjalan secara otomatis untuk mengeksekusi perintah INSERT, UPDATE, DELETE. Biasanya, TRIGGER akan dijalankan sebelum atau sesudah proses INSERT, UPDATE, DELETE (Perintah DML). Atau dalam kata lain, TRIGGER suatu objek database yang merupakan aksi atau prosedur yang terjadi jika terjadi perubahan pada suatu row.
 
@@ -124,7 +124,7 @@ Syntax ini dijalankan pada sql database yang digunakan. Keyword `OLD` digunakan 
 
 Operasi TRIGGER yang tersimpan dapat dilihat pada menu "Trigger":
 
-![image!](2)
+![image!](https://github.com/Kota-Cerdas-dan-Keamanan-Siber/Modul-SBD/blob/main/Modul-8/img/gambar%202.jpg)
 
 ### 1.4 Pengujian Trigger
 
@@ -144,7 +144,7 @@ FROM log_mahasiswa;
 
 Jadi record baru secara otomatis telah ditambahkan ke table `log_mahasiswa  untuk mahasiswa dengan `NIM 21400200` yang telah diubah alamat awal “bandung” menjadi “surabaya”. Sedangkan pada table mahasiswa alamat yang tercantum adalah alamat yang baru seperti tampilan berikut:
 
-![image!](3)
+![image!](https://github.com/Kota-Cerdas-dan-Keamanan-Siber/Modul-SBD/blob/main/Modul-8/img/gambar%203.jpg)
 
 ## 2. View
 
@@ -232,7 +232,7 @@ ON mahasiswa.nim = transaksi.nim;
 
 Sehingga diperoleh hasil output sebagai berikut:
 
-![image!](4)
+![image!](https://github.com/Kota-Cerdas-dan-Keamanan-Siber/Modul-SBD/blob/main/Modul-8/img/gambar%204.jpg)
 
 Dengan view kita bisa membuat table virtual yang menyimpan query join di atas dengan syntax berikut:
 ```sql
@@ -247,7 +247,7 @@ ON mahasiswa.nim = transaksi.nim
 
 Jadi kita telah membuat table virtual dengan operasi VIEW dengan nama transaksiMhs. Untuk cara menggunakannya adalah sama seperti melakukan query table biasa. Di MySql browser, kita dapat melihat munculnya table hasil operasi VIEW di bawah table utama dalam database, seperti pada gambar di bawah ini:
 
-![image!](5)
+![image!](https://github.com/Kota-Cerdas-dan-Keamanan-Siber/Modul-SBD/blob/main/Modul-8/img/gambar%205.jpg)
 
 Untuk menampilkan table hasil operasi VIEW dari database utama, maka dapat dijalankan syntax `SELECT`seperti biasa sebagai berikut:
 
@@ -266,7 +266,7 @@ WHERE nama_buku = "Buku Matematika";
 
 Nanti akan muncul table output seperti berikut:
 
-![image!](6)
+![image!](https://github.com/Kota-Cerdas-dan-Keamanan-Siber/Modul-SBD/blob/main/Modul-8/img/gambar%206.jpg)
 
 Nah kemudian sudah lelah belajar VIEW dan ingin menghapus operasi VIEW `transaksiMhs`, tinggal menuliskan syntax sebagai berikut:
 
