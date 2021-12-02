@@ -19,6 +19,7 @@
      - [5.1.4 Parameter IN dan OUT](#514-procedure-parameter-in-dan-out)
      - [5.1.5 Compound Statement](#515-procedure-compound-statement)
      - [5.2 Function](#52-uji-coba-function)
+- [6. Perbedaan](#6-perbedaan)
 
 ## 1. Pendahuluan
 Procedure & Function adalah subprogram yang dapat dibuat dan disimpan dalam database sebagai objek database. Mereka dapat dipanggil program lain atau melalui SQL.
