@@ -176,7 +176,7 @@ ON j.kode_jurusan = m.kode_jurusan
 WHERE m.kode_jurusan = kdjurusan;
 ```
 
-Memamnggil Procedure
+Memanggil Procedure
 ```sql
 CALL sp_jurusan_mhs('01')
 ```
@@ -193,7 +193,7 @@ CREATE PROCEDURE sp_sum_mhs (OUT sum int(11))
 SELECT count(*) INTO sum FROM mahasiswa;
 ```
 
-Memamnggil Procedure
+Memanggil Procedure
 ```sql
 CALL sp_sum_mhs(@n);
 SELECT @n;
@@ -212,7 +212,7 @@ SELECT CONCAT("(",left(telp,3),") ",substring(telp,4,3),"-",substring(telp,7))
 INTO telp
 ```
 
-Memamnggil Procedure
+Memanggil Procedure
 ```sql
 SET @telp = '0211234567';
 CALL sp_telp(@telp);
@@ -232,7 +232,7 @@ SELECT count(*) INTO sum FROM mahasiswa
 WHERE kode_jurusan = kdjurusan;
 ```
 
-Memamnggil Procedure
+Memanggil Procedure
 ```sql
 CALL sp_sum_jurusan('01', @n);
 SELECT @n;
@@ -286,7 +286,7 @@ $$
 DELIMITER ;
 ```
 
-Memamnggil Function
+Memanggil Function
 ```sql
 SELECT kode_jurusan, nama_jurusan, f_sum_mhs(kode_jurusan) FROM jurusan
 ```
@@ -294,3 +294,14 @@ SELECT kode_jurusan, nama_jurusan, f_sum_mhs(kode_jurusan) FROM jurusan
 Hasil
 
 ![image](https://github.com/Kota-Cerdas-dan-Keamanan-Siber/Modul-SBD/blob/main/Modul-9/img/modul9-6.jpg)
+
+## 6. Perbedaan
+
+| PROCEDURE | FUNCTION |
+| ------ | ------ |
+| Digunakan terutama untuk menjalankan proses tertentu | Digunakan terutama untuk melakukan beberapa perhitungan |
+| Tidak dapat dipanggil dalam pernyataan SELECT | Fungsi yang tidak berisi pernyataan DML dapat dipanggil dalam pernyataan SELECT |
+| Gunakan parameter OUT untuk mengembalikan nilai | Gunakan RETURN untuk mengembalikan nilai |
+| Tidak wajib mengembalikan nilainya | Wajib mengembalikan nilainya |
+| RETURN hanya akan keluar dari kontrol dari subprogram | RETURN akan keluar dari kontrol dari subprogram dan juga mengembalikan value |
+| Tipe data yang dikembalikan tidak akan ditentukan pada saat pembuatan | Mengembalikan tipe data wajib pada saat pembuatan |
