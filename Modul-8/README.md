@@ -18,7 +18,7 @@
 
 TRIGGER adalah kumpulan kode SQL yang berjalan secara otomatis untuk mengeksekusi perintah INSERT, UPDATE, DELETE. Biasanya, TRIGGER akan dijalankan sebelum atau sesudah proses INSERT, UPDATE, DELETE (Perintah DML). Atau dalam kata lain, TRIGGER suatu objek database yang merupakan aksi atau prosedur yang terjadi jika terjadi perubahan pada suatu row.
 
-fungsi TRIGGER dalam database sebenarnya merupakan kode prosedural yang secara otomatis dijalankan untuk menanggapi perubahan tertentu pada table tertentu atau tampilan dalam database. Trigger biasanya banyak digunakan untuk menjaga integritas informasi pada database.
+Fungsi TRIGGER dalam database sebenarnya merupakan kode prosedural yang secara otomatis dijalankan untuk menanggapi perubahan tertentu pada table tertentu atau tampilan dalam database. Trigger biasanya banyak digunakan untuk menjaga integritas informasi pada database.
 
 Idealnya, Trigger harus dipertimbangkan ketika kode ini digunakan untuk mengotomatisasi perubahan yang spesifik untuk database atau pengelolaan data. Log audit adalah contoh penerapan dari Trigger. Misalnya sebuah sistem CMS WordPress dengan table ‘blog’ yang berisi judul dan isi artikel. Kemudian sebuah table ‘audit’ yang bisa merekam tanggal dan waktu sebuah artikel ketika ditambahkan, diedit atau dihapus. Sistem web Anda mungkin tidak pernah menyajikan informasi yang atau bahkan tahu setiap perubahan database itu dicatat.
 
