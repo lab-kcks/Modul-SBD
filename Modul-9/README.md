@@ -1,5 +1,25 @@
 # Stored Procedure & Function
 
+## Daftar Isi
+- [1. Pendahuluan](#1-pendahuluan)
+- [2. Keuntungan](#2-keuntungan)
+- [3. Terminologi](#3-terminologi)
+     - [3.1 Parameter](#31-parameter)
+     - [3.2 RETURN](#32-return)
+- [4. Syntax](#4-syntax)
+     - [4.1 Create](#41-untuk-membuat)
+     - [4.2 Drop](#42-untuk-menghapus)
+     - [4.3 Call](#43-untuk-memanggil)
+     - [4.2 Show](#44-untuk-melihat-listnya)
+- [5. Uji coba](#5-uji-coba)
+     - [5.1 Procedure](#51-uji-coba-procedure)
+     - [5.1.1 Parameter IN](#511-procedure-parameter-in)
+     - [5.1.2 Parameter OUT](#512-procedure-parameter-out)
+     - [5.1.3 Parameter INOUT](#513-procedure-parameter-inout)
+     - [5.1.4 Parameter IN dan OUT](#514-procedure-parameter-in-dan-out)
+     - [5.1.5 Compound Statement](#515-procedure-compound-statement)
+     - [5.2 Function](#52-uji-coba-function)
+
 ## 1. Pendahuluan
 Procedure & Function adalah subprogram yang dapat dibuat dan disimpan dalam database sebagai objek database. Mereka dapat dipanggil program lain atau melalui SQL.
 Terdapat 2 function pada MYSQL:
@@ -34,7 +54,6 @@ Terdapat 3 mode parameter yaitu : IN, OUT, dan INOUT
   Parameter ini digunakan baik untuk memberikan input maupun untuk mendapatkan output dari subprogram. Nilainya dapat diubah di dalam subprogram. Dalam pernyataan       pemanggilan, parameter ini harus selalu berupa variabel untuk menampung nilai dari subprogram. 
   
 ### 3.2 RETURN
-  
 RETURN adalah kata kunci yang menginstruksikan kompiler untuk mengalihkan kontrol dari subprogram ke pernyataan panggilan. Di Function RETURN juga mengembalikan nilai.
 
 ## 4. Syntax
@@ -78,15 +97,36 @@ ROUTINE_BODY berisi statement SQL yang valid. Dapat berisi statement sederhana s
 
 ### 4.2 Untuk menghapus
 
-`DROP {PROCEDURE|FUNCTION} [IF EXIST] name`
+```
+sql DROP {PROCEDURE|FUNCTION} [IF EXIST] name
+```
 
-contoh: `DROP PORCEDURE spDafGaji;`
+contoh: 
+```
+sql DROP PORCEDURE spDafGaji;
+```
 
 ### 4.3 Untuk memanggil
 
-`CALL name`
+```sql 
+CALL name
+```
 
-contoh: `CALL spDafGaji();`
+contoh: 
+```sql 
+CALL spDafGaji();
+```
+
+### 4.4 Untuk melihat listnya
+
+```sql 
+SHOW {PROCEDURE|FUNCTION} statu s;
+```
+
+contoh: 
+```sql 
+Show PROCEDURE status;
+```
 
 
 ## 5. Uji Coba
@@ -118,6 +158,10 @@ INSERT INTO `mahasiswa` (`id`, `nama`, `kode_jurusan`) VALUES
 (5, 'Erika', '03');
 ```
 
+Hasil akhir struktur database
+
+![image](https://github.com/Kota-Cerdas-dan-Keamanan-Siber/Modul-SBD/blob/main/Modul-9/img/modul9-0.jpg)
+
 ### 5.1 Uji Coba Procedure
 
 #### 5.1.1 Procedure Parameter IN
@@ -137,6 +181,10 @@ Memamnggil Procedure
 CALL sp_jurusan_mhs('01')
 ```
 
+Hasil
+
+![image](https://github.com/Kota-Cerdas-dan-Keamanan-Siber/Modul-SBD/blob/main/Modul-9/img/modul9-1.jpg)
+
 #### 5.1.2 Procedure Parameter OUT
 
 Menambahkan Procedure
@@ -150,6 +198,10 @@ Memamnggil Procedure
 CALL sp_sum_mhs(@n);
 SELECT @n;
 ```
+
+Hasil
+
+![image](https://github.com/Kota-Cerdas-dan-Keamanan-Siber/Modul-SBD/blob/main/Modul-9/img/modul9-2.jpg)
 
 #### 5.1.3 Procedure Parameter INOUT
 
@@ -167,6 +219,10 @@ CALL sp_telp(@telp);
 SELECT @telp;
 ```
 
+Hasil
+
+![image](https://github.com/Kota-Cerdas-dan-Keamanan-Siber/Modul-SBD/blob/main/Modul-9/img/modul9-3.jpg)
+
 #### 5.1.4 Procedure Parameter IN dan OUT
 
 Menambahkan Procedure
@@ -182,7 +238,11 @@ CALL sp_sum_jurusan('01', @n);
 SELECT @n;
 ```
 
-#### 5.1.5 Procedure Parameter Compound Statement
+Hasil
+
+![image](https://github.com/Kota-Cerdas-dan-Keamanan-Siber/Modul-SBD/blob/main/Modul-9/img/modul9-4.jpg)
+
+#### 5.1.5 Procedure Compound Statement
 
 Menambahkan Procedure
 ```sql
@@ -200,10 +260,14 @@ $$
 DELIMITER ;
 ```
 
-Memamnggil Procedure
+Memanggil Procedure
 ```sql
 CALL sp_ganti_jurusan('01', 'Statistika')
 ```
+
+Hasil
+
+![image](https://github.com/Kota-Cerdas-dan-Keamanan-Siber/Modul-SBD/blob/main/Modul-9/img/modul9-5.jpg)
 
 ### 5.2 Uji Coba Function
 
@@ -222,6 +286,11 @@ $$
 DELIMITER ;
 ```
 
-Memanggil Function
+Memamnggil Function
 ```sql
 SELECT kode_jurusan, nama_jurusan, f_sum_mhs(kode_jurusan) FROM jurusan
+```
+
+Hasil
+
+![image](https://github.com/Kota-Cerdas-dan-Keamanan-Siber/Modul-SBD/blob/main/Modul-9/img/modul9-6.jpg)
