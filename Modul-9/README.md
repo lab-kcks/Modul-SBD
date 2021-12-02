@@ -98,13 +98,13 @@ ROUTINE_BODY berisi statement SQL yang valid. Dapat berisi statement sederhana s
 
 ### 4.2 Untuk menghapus
 
-```
-sql DROP {PROCEDURE|FUNCTION} [IF EXIST] name
+```sql 
+DROP {PROCEDURE|FUNCTION} [IF EXIST] name
 ```
 
 contoh: 
-```
-sql DROP PORCEDURE spDafGaji;
+```sql 
+DROP PORCEDURE spDafGaji;
 ```
 
 ### 4.3 Untuk memanggil
