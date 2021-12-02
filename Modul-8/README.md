@@ -23,9 +23,10 @@ Fungsi TRIGGER dalam database sebenarnya merupakan kode prosedural yang secara o
 Idealnya, Trigger harus dipertimbangkan ketika kode ini digunakan untuk mengotomatisasi perubahan yang spesifik untuk database atau pengelolaan data. Log audit adalah contoh penerapan dari Trigger. Misalnya sebuah sistem CMS WordPress dengan table ‘blog’ yang berisi judul dan isi artikel. Kemudian sebuah table ‘audit’ yang bisa merekam tanggal dan waktu sebuah artikel ketika ditambahkan, diedit atau dihapus. Sistem web Anda mungkin tidak pernah menyajikan informasi yang atau bahkan tahu setiap perubahan database itu dicatat.
 
 #### Karakteristik Trigger:
-1) Sebuah nama yang unik. Misalnya blog_before_insert atau blog_after_update.
+1) Sebuah nama yang unik, misalnya blog_before_insert atau blog_after_update.
 2) Sebuah Trigger hanya dapat memonitor satu table.
-3) Ketika Trigger dijalankan, ini terjadi ‘before’ atau ‘after’ INSERT, UPDATE atau DELETE. Trigger ‘before’ harus digunakan jika Anda perlu untuk memodifikasi data yang masuk. 4. Sebuah Trigger ‘after’ harus digunakan jika Anda ingin referensi record baru, berubah sebagai foreign key untuk catatan di table lain.
+3) Ketika Trigger dijalankan, ini terjadi ‘before’ atau ‘after’ INSERT, UPDATE atau DELETE. Trigger ‘before’ harus digunakan jika Anda perlu untuk memodifikasi data yang masuk. 
+4) Sebuah Trigger ‘after’ harus digunakan jika Anda ingin referensi record baru, berubah sebagai foreign key untuk catatan di table lain.
 5) Blok kode Trigger: satu set perintah SQL untuk menjalankan. Perhatikan bahwa Anda dapat merujuk ke suatu kolom dalam tabel menggunakan OLD.col_name (nilai sebelumnya) atau NEW.col_name (nilai baru). Nilai untuk NEW.col_name dapat diubah dalam Trigger SEBELUM INSERT dan UPDATE.
 
 ### 1.2 Syntax
@@ -42,30 +43,28 @@ END$$
 DELIMITER ;
 ```
 
-Untuk memulai menggunakan TRIGGER kita gunakan CREATE TRIGGER dilanjutkan nama TRIGGER yang ingin dibuat. `{BEFORE | AFTER}` adalah waktu TRIGGER akan dijalankan, apakah sebelum atau sesudah database dimodifikasi oleh perintah DML. `{INSERT | UPDATE | DELETE}` adalah perintah DML yang mengaktifkan TRIGGER
+Untuk memulai menggunakan TRIGGER, kita menggunakan `CREATE TRIGGER` dilanjutkan dengan nama TRIGGER yang ingin dibuat. `{BEFORE | AFTER}` adalah waktu TRIGGER akan dijalankan, apakah sebelum atau sesudah database dimodifikasi oleh perintah DML. `{INSERT | UPDATE | DELETE}` adalah perintah DML yang mengaktifkan TRIGGER. `ON` mendefinisikan table yang mengaktifkan TRIGGER. `BEGIN END` adalah pernyataan yang membungkus kode TRIGGER. Pastikan diawal gunakan `DELIMITER $$` dan diakhir dikembalikan ke `DELIMITER;`
 
-Lebih detail waktu TRIGGER akan dijelaskan di tabel berikut:
+Jenis-jenis TRIGGER dapat dibagi menjadi beberapa jenis, yang akan dijelaskan di tabel berikut:
 
 | No | Waktu TRIGGER | Keterangan TRIGGER |
 | ------ | ------ | ------ |
-| 1 | BEFORE INSERT	| TRIGGER dijalankan sebelum record dimasukkan ke database |
-| 2 | AFTER INSERT |	TRIGGER dijalankan sesudah record dimasukkan ke database |
-| 3 | BEFORE UPDATE	| TRIGGER dijalankan sebelum record dirubah di database |
-| 4 | AFTER UPDATE |	TRIGGER dijalankan sesudah record dirubah database |
-| 5 | BEFORE DELETE |	TRIGGER dijalankan sebelum record dihapus di database |
-| 6 | AFTER DELETE |	TRIGGER dijalankan sesudah record dihapus di database |
-
-`ON` mendefinisikan table yang mengaktifkan TRIGGER. `BEGIN END  adalah pernyataan yang membungkus kode TRIGGER. Pastikan diawal gunakan `DELIMITER $$` dan diakhir dikembalikan ke `DELIMITER;`
+| 1 | BEFORE INSERT	| TRIGGER yang dijalankan sebelum record dimasukkan ke database |
+| 2 | AFTER INSERT | TRIGGER yang dijalankan sesudah record dimasukkan ke database |
+| 3 | BEFORE UPDATE	| TRIGGER yang dijalankan sebelum record diubah di database |
+| 4 | AFTER UPDATE | TRIGGER yang dijalankan sesudah record diubah database |
+| 5 | BEFORE DELETE | TRIGGER yang dijalankan sebelum record dihapus di database |
+| 6 | AFTER DELETE | TRIGGER yang dijalankan sesudah record dihapus di database |
 
 ### 1.3 Contoh Implementasi
-Untuk praktek TRIGGER kali ini, kita akan database yang bernama `data_alamat` yang berisi 2 tabel, bernama table `mahasiswa` dan table `log_mahasiswa`. Fungsi dari kedua tabel adalah sebagai berikut:
+Untuk praktek TRIGGER kali ini, kita akan menggunakan database yang bernama `data_alamat` yang terdiri dari 2 tabel yang bernama table `mahasiswa` dan table `log_mahasiswa`. Fungsi dari kedua tabel adalah sebagai berikut:
 
 ```
 Table mahasiswa -> menyimpan data mahasiswa
 Table log_mahasiswa -> menyimpan perubahan data mahasiswa
 ```
 
-Jadi setiap ada perubahan data (UPDATE) alamat mahasiswa pada table mahasiswa maka akan disimpan di table log_mahasiwa tentang histori perubahan data alamat tersebut. Dengan adanya log perubahan data mahasiswa maka akan memudahkan dalam melihat histori data mahasiswa yang pernah berubah dalam sistem.
+Jadi, setiap ada perubahan data (UPDATE) alamat mahasiswa, pada table mahasiswa maka akan disimpan di table log_mahasiwa tentang histori perubahan data alamat tersebut. Dengan adanya log perubahan data mahasiswa maka akan memudahkan dalam melihat histori data mahasiswa yang pernah berubah dalam sistem.
 
 Syntax pembuatan tabel `mahasiswa` adalah sebagai berikut:
 
@@ -142,7 +141,7 @@ SELECT *
 FROM log_mahasiswa;
 ```
 
-Jadi record baru secara otomatis telah ditambahkan ke table `log_mahasiswa  untuk mahasiswa dengan `NIM 21400200` yang telah diubah alamat awal “bandung” menjadi “surabaya”. Sedangkan pada table mahasiswa alamat yang tercantum adalah alamat yang baru seperti tampilan berikut:
+Jadi record baru secara otomatis telah ditambahkan ke table `log_mahasiswa`  untuk mahasiswa dengan `NIM 21400200` yang telah diubah alamat awal “bandung” menjadi “surabaya”. Sedangkan pada table mahasiswa alamat yang tercantum adalah alamat yang baru seperti tampilan berikut:
 
 ![image!](https://github.com/Kota-Cerdas-dan-Keamanan-Siber/Modul-SBD/blob/main/Modul-8/img/gambar%203.jpg)
 
@@ -153,12 +152,15 @@ Dalam SQL, VIEW merupakan tabel virtual yang dibuat berdasarkan kumpulan hasil d
 
 #### Keuntungan Menggunakan VIEW
 1) Menyederhanakan kueri kompleks
+
 VIEW membantu menyederhanakan kueri kompleks. Jika kita memiliki kueri kompleks yang sering digunakan, kita dapat membuat tampilan berdasarkan kueri tersebut sehingga kita dapat merujuk ke tampilan tersebut dengan menggunakan pernyataan SELECT sederhana alih-alih mengetik kueri lagi.
 
-2) Membuat logika bisnis yang konsisten
-Misalkan kita harus berulang kali menulis rumus yang sama di setiap kueri memiliki kueri yang memiliki logika bisnis yang kompleks. Untuk membuat logika ini konsisten di seluruh kueri, Akita bisa menggunakan VIEW untuk menyimpan penghitungan dan menyembunyikan kerumitannya.
+2) Membuat bussiness logic yang konsisten
+
+Misalkan kita harus berulang kali menulis rumus yang sama di setiap kueri memiliki kueri yang memiliki bussiness logic yang kompleks. Untuk membuat logika ini konsisten di seluruh kueri, kita bisa menggunakan VIEW untuk menyimpan penghitungan dan menyembunyikan kerumitannya.
 
 3) Menambahkan lapisan keamanan ekstra
+
 Sebuah tabel dapat mengekspos banyak data termasuk data sensitif seperti informasi pribadi dan perbankan. Dengan menggunakan VIEW dan priviledge setting, kita dapat membatasi data mana yang dapat diakses pengguna dengan hanya memaparkan data yang diperlukan kepada mereka. Misalnya, tabel karyawan mungkin berisi SSN dan informasi alamat, yang seharusnya hanya dapat diakses oleh departemen SDM.
 
 ### 2.2 Syntax
@@ -175,7 +177,7 @@ WHERE condition;
 
 Saat kita mengeksekusi CREATE VIEW maka akan terbentuk table virtual yang menyimpan kode SQL. Contohnya, kita akan membuat kode SQL yang menghubungkan table mahasiswa dan table transaksi secara INNER JOIN dan menyimpannya ke view.
 
-Kita juga bisa melakukan perintah `DELETE VIEW` pada VIEW yang kita miliki dengan syntax sebaga berikut:
+Kita juga bisa melakukan perintah `DROP VIEW` pada VIEW yang kita miliki dengan syntax sebaga berikut:
 
 ```sql
 DROP VIEW view_name; 
@@ -240,7 +242,7 @@ CREATE VIEW transaksiMhs AS
 SELECT mahasiswa.nim, nama, alamat, nama_buku
 FROM mahasiswa
 INNER JOIN transaksi
-ON mahasiswa.nim = transaksi.nim
+ON mahasiswa.nim = transaksi.nim;
 ```
 
 ### 2.4 Pengujian View
@@ -268,7 +270,7 @@ Nanti akan muncul table output seperti berikut:
 
 ![image!](https://github.com/Kota-Cerdas-dan-Keamanan-Siber/Modul-SBD/blob/main/Modul-8/img/gambar%206.jpg)
 
-Nah kemudian sudah lelah belajar VIEW dan ingin menghapus operasi VIEW `transaksiMhs`, tinggal menuliskan syntax sebagai berikut:
+Nah kemudian sudah lelah belajar VIEW dan ingin menghapus table hasil operasi VIEW `transaksiMhs`, tinggal menuliskan syntax sebagai berikut:
 
 ```sql
 DROP VIEW transaksiMhs;
